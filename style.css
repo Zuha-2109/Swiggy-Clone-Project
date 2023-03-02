@@ -73,11 +73,11 @@ a {
     fill: #f77318
 }
 
-.grow {
+.zoom {
     transition: all .2s ease-in-out;
 }
 
-.grow:hover {
+.zoom:hover {
     transform: scale(1.1);
 }
 
@@ -115,22 +115,32 @@ a {
     border-bottom: 1px solid black;
 }
 
-.card-container {
+.place-container {
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(4, auto);
+    margin-right: 8px;
 }
 
-.card {
+
+/* .place-container .place-link {
+    background: #fff;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+} */
+
+.place {
     padding: 25px;
     width: 240px;
     height: 390px;
     display: flex;
     flex-flow: column wrap;
     gap: 10px;
+    background: #fff;
 }
 
-.bullet {
+.bullets {
     background-color: #5e5e61;
     height: 4px;
     width: 4px;
@@ -160,6 +170,13 @@ a {
     gap: 3px;
 }
 
+.top-img {
+    background: #eef0f5;
+    width: 254px;
+    height: 160px;
+    position: relative;
+}
+
 .view {
     font-weight: 600;
     padding-top: 17px;
@@ -174,16 +191,12 @@ a {
     font-size: 14px;
 }
 
-.view {
-    display: none;
-}
-
-.card:hover {
+.place:hover {
     outline: 1px solid #cccbcb;
     box-shadow: #cccbcb 1px 1px;
 }
 
-.card:hover .view {
+.place:hover .view {
     display: flex;
 }
 
@@ -196,12 +209,9 @@ a {
     padding-top: 90px;
     padding-bottom: 90px;
     background-color: black;
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly; */
     display: grid;
-    grid-template-columns: repeat(3, auto) 200px;
-    gap: 20px;
+    grid-template-columns: repeat(3, auto) 350px;
+    gap: 35px;
 }
 
 .foot a {
@@ -236,7 +246,7 @@ a {
 }
 
 @media (max-width:1370px) {
-    .card-container {
+    .place-container {
         margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(3, auto);
@@ -244,7 +254,7 @@ a {
 }
 
 @media (max-width:1022px) {
-    .card-container {
+    .place-container {
         margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -252,7 +262,7 @@ a {
 }
 
 @media (max-width:681px) {
-    .card-container {
+    .place-container {
         margin-top: 60px;
         display: grid;
         grid-template-columns: auto;
@@ -298,7 +308,7 @@ a {
 }
 
 @media (max-width:625px) {
-    .card-container {
+    .place-container {
         margin-top: 100px;
     }
 }
